@@ -4,7 +4,7 @@ An advanced, interactive 3D simulation of the DNA Double Helix structure built f
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 
 * **Pure WebGL Engine:** Rendered entirely using low-level vanilla WebGL without heavy third-party frameworks like Three.js, ensuring optimized performance and lightning-fast loading speeds.
 * **Complementary Base Pairing:** Accurately visualizes Watson-Crick base pairing rules ($A=T$ and $G\equiv C$) with distinct neon color-coding and dynamic chemical bond lines.
@@ -19,7 +19,7 @@ An advanced, interactive 3D simulation of the DNA Double Helix structure built f
 
 ---
 
-## 🧪 Biochemical Database Specs
+##  Biochemical Database Specs
 
 The application embeds an exhaustive scientific dictionary mapping out the structural properties of each nucleobase:
 
@@ -28,7 +28,7 @@ The application embeds an exhaustive scientific dictionary mapping out the struc
 
 ---
 
-## 🛠️ Project Structure
+##  Project Structure
 
 The project follows a clean, decoupled modular layout separating core rendering logic, stylistic environments, and DOM interaction hooks:
 
