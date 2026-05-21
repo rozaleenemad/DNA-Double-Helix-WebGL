@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Double Helix — WebGL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="stars-background"></div>
+
+    <canvas id="c"></canvas>
+    <div class="dna-glow-shadow"></div>
+
+    <div id="title">
+        <h1>DNA Double Helix</h1>
+    </div>
+
+    <div id="legend">
+        <div class="leg" data-base="A" style="--c:#00d4ff" onclick="filterBase('A')">
+            <div class="ldot"></div>
+            <div>
+                <div class="lname">Adenine</div>
+                <div class="lsub">A — pairs with T</div>
+            </div>
+        </div>
+
+        <div class="leg" data-base="T" style="--c:#ff4d8a" onclick="filterBase('T')">
+            <div class="ldot"></div>
+            <div>
+                <div class="lname">Thymine</div>
+                <div class="lsub">T — pairs with A</div>
+            </div>
+        </div>
+
+        <div class="leg" data-base="G" style="--c:#3dff9a" onclick="filterBase('G')">
+            <div class="ldot"></div>
+            <div>
+                <div class="lname">Guanine</div>
+                <div class="lsub">G ≡ pairs with C</div>
+            </div>
+        </div>
+
+        <div class="leg" data-base="C" style="--c:#ffb830" onclick="filterBase('C')">
+            <div class="ldot"></div>
+            <div>
+                <div class="lname">Cytosine</div>
+                <div class="lsub">C ≡ pairs with G</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="panel">
+        <button id="close-btn" onclick="closePanel()">✕</button>
+
+        <div id="p-chip"></div>
+        <div id="p-name"></div>
+        <div id="p-full"></div>
+        <div id="p-divider"></div>
+        <div id="p-desc"></div>
+
+        <div id="p-stats"></div>
+
+        <div id="p-pair">
+            <div>
+                <div class="pair-base" id="pb1"></div>
+                <div style="font-size:9px;color:rgba(150,180,220,0.4);margin-top:2px;" id="pn1"></div>
+            </div>
+
+            <div class="pair-bonds">
+                <div class="pair-line" id="pline"></div>
+                <div class="pair-label" id="pbonds"></div>
+            </div>
+
+            <div style="text-align:right">
+                <div class="pair-base" id="pb2"></div>
+                <div style="font-size:9px;color:rgba(150,180,220,0.4);margin-top:2px;" id="pn2"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hint">
+        Click any sphere to explore · Drag to rotate · Scroll to Zoom
+    </div>
+
+    <div id="controls">
+        <label id="cbt">
+            <button class="cbtn active" id="btnSpin" onclick="toggleSpin()">
+                Auto Spin
+            </button>
+            <div class="sep"></div>
+            <input type="range" id="spd" min="0.1" max="3" step="0.05" value="1">
+            <span id="spd-lbl"> 1.0× Speed</span>
+            <div class="sep"></div>
+        </label>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
